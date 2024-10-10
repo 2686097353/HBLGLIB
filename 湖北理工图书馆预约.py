@@ -4,7 +4,7 @@ import json
 import time
 
 config = {
-    "user": 202220291304,#你的账号
+    "user": 20224000001,#你的账号
     "pw": "192947401ba2cd9c04331e056d00ee856895f441d5e07fdfac400711cd04c9c3d953f52",#加密的密码
     "seat": "T1-1-005",#座位号
     "StartTime": "07:00:00",#座位开始时间
