@@ -1,11 +1,10 @@
 
 湖北理工学院图书馆预约
 
-**爬虫分析**
+
+___爬虫分析___
 
 登录页面：http://zwyd.hbpu.edu.cn
-![1728538356970](https://github.com/user-attachments/assets/a9c21662-d7dd-4b5b-958e-497dd2b6ba43)
-
 
 
 登录页面：http://zwyd.hbpu.edu.cn
@@ -14,13 +13,20 @@
 
 **爬虫分析**
 
-https://cas.hbpu.edu.cn/lyuapServer/v1/tickets
+```https://cas.hbpu.edu.cn/lyuapServer/v1/tickets```
 
-这个请求，里面请求头为
 
-username:	123  账号
-password:	12a5d0523e124   加密的密码
-service:	http://zwyd.hbpu.edu.cn
-loginType:	
-id:	ed5fb1132ffa45a2a97f3780167a648f
-code:	1     验证码
+```
+username: 账号
+password: 加密的密码
+service: http://zwyd.hbpu.edu.cn
+loginType: 
+id: 
+code: 验证码
+
+```
+
+|username|   |
+|password|---|
+|service|   |
+|loginType|   |
