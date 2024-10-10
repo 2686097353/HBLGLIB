@@ -33,6 +33,7 @@ code: 验证码
 
 
 
+
 ___2. 用ticket获取redirectUrl与extInfo___
 **URL**
 ```
@@ -57,6 +58,7 @@ vals: null
 
 
 
+
 ___3. 重定向到登录页面___
 **URL**
 ```
@@ -78,6 +80,7 @@ https://cas.hbpu.edu.cn/lyuapServer/login?service=http%3A%2F%2Fzwyd.hbpu.edu.cn%
 从返回值中获取doAuth
 
 
+
 ___3. 用ticket、doAuth获取uuid、uniToken、extInfo___
 **URL**
 ```
@@ -94,6 +97,8 @@ http://zwyd.hbpu.edu.cn/authcenter/doAuth/{do_auth_id}
 ```
 http://zwyd.hbpu.edu.cn/ic-web//auth/token?&uuid=820686ed15e841da8c5b9946757ae988&uniToken=eyJhbGciOiJIUzUxMiIsImNhbGciOiJHWklQIn0.H4sIAAAAAAAAAGVQu24CMRD8F9cU3AOR0HINzTXQoRQr7yYx8uNkr6VDKP8eIzjbiMLF7GjGM3MT2v0oO4IhsRPtum3T-2y6dS9Wgn2kB2Oj1ishwePoFqRwn_CCQEoXLReSLA9K7h0WuYYQaj-kiWts4OJ8fQg0vxjmOwPHsCAyoHTOgegpZG76dbYEiIGdGYAhSy2TP12nEoFMLijnY_qnqOe6zLPv8Znk_JXM5kl5wqHShBRFOXvIM6l7NBGt-k5qTBtDxPfhk5PYNdv2Y9M3fdf9_QPp9zsZpgEAAA.0XD-Ct1CJkJIUg40spFiW_G8td7NDW-Y43obNbsaxnuZmkpNs_qQqgazFx5rkII9IeacrolY8xaFHkqgzDMtug&extInfo=P3RpY2tldD1TVC0xNDAzNTItY2IxZDk2OTA1YWIxNDE1ZmE3ZjliNmRiZGQ4MTNlNmIjLw==
 ```
+
+
 ___4. 获取cookie___
 **URL**
 ```
