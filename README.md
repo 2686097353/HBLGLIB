@@ -26,7 +26,7 @@ password: 加密的密码
 service: http://zwyd.hbpu.edu.cn
 loginType: 
 id: 
-code: 验证码
+code: 验证码（未进行验证，任意数值都行）
 ```
 
 **响应**
