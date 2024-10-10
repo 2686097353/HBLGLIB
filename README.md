@@ -32,3 +32,23 @@ code: 验证码
 ```
 
 2. 用ticket获取新的定向网址
+**URL**
+```
+http://zwyd.hbpu.edu.cn/ic-web/auth/address
+```
+
+**请求头**
+```
+'queryParam': f'?ticket={ticket}#/'
+```
+
+**响应**
+```
+{
+code: 0,
+message: "查询成功",
+data: http://zwyd.hbpu.edu.cn/authcenter/toLoginPage?redirectUrl=http%3A%2F%2Fzwyd.hbpu.edu.cn%2Fic-web%2F%2Fauth%2Ftoken%3F%26uuid%3D820686eXXXXXXXXXXXextInfo=P3RpY2tldD1TVC0xNDAzNTXXXXXXXXXNmRiZGQ4MTNlNmIjLw==,
+count: 0,
+vals: null
+}
+```
