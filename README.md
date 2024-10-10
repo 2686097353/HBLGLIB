@@ -13,11 +13,12 @@ ___爬虫分析___
 
 **爬虫分析**
 
-*1.登录获取tgt与ticket*
+1.登录获取tgt与ticket
 
+**url**
 ```https://cas.hbpu.edu.cn/lyuapServer/v1/tickets```
 
-
+**请求头**
 ```
 username: 账号
 password: 加密的密码
@@ -26,7 +27,7 @@ loginType:
 id: 
 code: 验证码
 ```
-
+**响应**
 ```
 {'tgt': 'TGT-132637-7e52b298829xxxxxxxxxxx'0cf6c36d52d', 'ticket': 'ST-132637-b1995xxxxxxxxxxx90bcf652d4ee5'}
 ```
