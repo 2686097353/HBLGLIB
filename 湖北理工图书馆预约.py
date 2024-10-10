@@ -4,9 +4,9 @@ import json
 import time
 
 config = {
-    "user": 202220291304,
-    "pw": "9b2ec396c516322dfb62e451b741dd1b372b0fac885e8877ce44e149876c9fa47d3dbea0da8bb3b7efcff11a875390a137754680ffb15f25dc828df4607bad6bf0340fb58765fe9b2d74d07334b49185d7b83db7e218e7f81acdbc87d192947401ba2cd9c04331e056d00ee856895f441d5e07fdfac400711cd04c9c3d953f52",
-    "seat": "T1-1-005",
+    "user": 202220291304,#你的账号
+    "pw": "192947401ba2cd9c04331e056d00ee856895f441d5e07fdfac400711cd04c9c3d953f52",#加密的密码
+    "seat": "T1-1-005",#座位号
     "StartTime": "07:00:00",
     "EndTime": "22:00:00",
 }
