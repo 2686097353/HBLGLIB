@@ -15,8 +15,10 @@ ___爬虫分析___
 
 1.登录获取tgt与ticket
 
-**url**
-```https://cas.hbpu.edu.cn/lyuapServer/v1/tickets```
+**URL**
+```
+https://cas.hbpu.edu.cn/lyuapServer/v1/tickets
+```
 
 **请求头**
 ```
@@ -27,8 +29,10 @@ loginType:
 id: 
 code: 验证码
 ```
+
 **响应**
 ```
 {'tgt': 'TGT-132637-7e52b298829xxxxxxxxxxx'0cf6c36d52d', 'ticket': 'ST-132637-b1995xxxxxxxxxxx90bcf652d4ee5'}
 ```
 
+2. 用ticket获取新的定向网址
