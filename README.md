@@ -9,7 +9,7 @@ ___爬虫分析___
 
 **爬虫分析**
 
-1.登录获取tgt与ticket
+___1.登录获取tgt与ticket___
 
 **URL**
 ```
@@ -31,7 +31,7 @@ code: 验证码
 {'tgt': 'TGT-132637-7e52b298829xxxxxxxxxxx'0cf6c36d52d', 'ticket': 'ST-132637-b1995xxxxxxxxxxx90bcf652d4ee5'}
 ```
 
-2. 用ticket获取新的定向网址
+___2. 用ticket获取redirectUrl与extInfo___
 **URL**
 ```
 http://zwyd.hbpu.edu.cn/ic-web/auth/address
@@ -52,3 +52,26 @@ count: 0,
 vals: null
 }
 ```
+从返回值data中获取redirectUrl 和 extInfo
+
+___3. 重定向到登录页面___
+**URL**
+```
+http://zwyd.hbpu.edu.cn/authcenter/toLoginPage
+```
+
+**请求头**
+```
+{
+        'redirectUrl': redirectUrl,
+        'extInfo': extInfo,
+}
+```
+
+**响应**
+```
+
+https://cas.hbpu.edu.cn/lyuapServer/login?service=http%3A%2F%2Fzwyd.hbpu.edu.cn%2Fauthcenter%2FdoAuth%2F15b721b54XXXXXXXXXXX
+```
+从返回值中获取doAuth
+
