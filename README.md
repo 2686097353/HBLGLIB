@@ -12,12 +12,15 @@
 输入账号密码，密码被加密，暂未逆向，验证码实际上输入任意值都可以通过
 打开F12，开发者工具，随便输入账号，密码，验证码，登录
 
-找到
-https://cas.hbpu.edu.cn/lyuapServer/v1/tickets这个请求，里面请求头为
+**爬虫分析**
 
-username:	123
-password:	12a5d0523e124
+https://cas.hbpu.edu.cn/lyuapServer/v1/tickets
+
+这个请求，里面请求头为
+
+username:	123  账号
+password:	12a5d0523e124   加密的密码
 service:	http://zwyd.hbpu.edu.cn
 loginType:	
 id:	ed5fb1132ffa45a2a97f3780167a648f
-code:	1
+code:	1     验证码
