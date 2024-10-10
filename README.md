@@ -9,14 +9,14 @@ ___爬虫分析___
 
 **爬虫分析**
 
+
+
 ___1.登录获取tgt与ticket___
 
 **URL**
 ```
 https://cas.hbpu.edu.cn/lyuapServer/v1/tickets
 ```
-
-**请求头**
 ```
 username: 账号
 password: 加密的密码
@@ -31,13 +31,14 @@ code: 验证码
 {'tgt': 'TGT-132637-7e52b298829xxxxxxxxxxx'0cf6c36d52d', 'ticket': 'ST-132637-b1995xxxxxxxxxxx90bcf652d4ee5'}
 ```
 
+
+
 ___2. 用ticket获取redirectUrl与extInfo___
 **URL**
 ```
 http://zwyd.hbpu.edu.cn/ic-web/auth/address
 ```
 
-**请求头**
 ```
 'queryParam': f'?ticket={ticket}#/'
 ```
@@ -54,13 +55,14 @@ vals: null
 ```
 从返回值data中获取redirectUrl 和 extInfo
 
+
+
 ___3. 重定向到登录页面___
 **URL**
 ```
 http://zwyd.hbpu.edu.cn/authcenter/toLoginPage
 ```
 
-**请求头**
 ```
 {
         'redirectUrl': redirectUrl,
@@ -75,3 +77,42 @@ https://cas.hbpu.edu.cn/lyuapServer/login?service=http%3A%2F%2Fzwyd.hbpu.edu.cn%
 ```
 从返回值中获取doAuth
 
+
+___3. 用ticket、doAuth获取uuid、uniToken、extInfo___
+**URL**
+```
+http://zwyd.hbpu.edu.cn/authcenter/doAuth/{do_auth_id}
+```
+
+```
+{
+        'ticket': ticket
+    }
+```
+
+**响应**
+```
+http://zwyd.hbpu.edu.cn/ic-web//auth/token?&uuid=820686ed15e841da8c5b9946757ae988&uniToken=eyJhbGciOiJIUzUxMiIsImNhbGciOiJHWklQIn0.H4sIAAAAAAAAAGVQu24CMRD8F9cU3AOR0HINzTXQoRQr7yYx8uNkr6VDKP8eIzjbiMLF7GjGM3MT2v0oO4IhsRPtum3T-2y6dS9Wgn2kB2Oj1ishwePoFqRwn_CCQEoXLReSLA9K7h0WuYYQaj-kiWts4OJ8fQg0vxjmOwPHsCAyoHTOgegpZG76dbYEiIGdGYAhSy2TP12nEoFMLijnY_qnqOe6zLPv8Znk_JXM5kl5wqHShBRFOXvIM6l7NBGt-k5qTBtDxPfhk5PYNdv2Y9M3fdf9_QPp9zsZpgEAAA.0XD-Ct1CJkJIUg40spFiW_G8td7NDW-Y43obNbsaxnuZmkpNs_qQqgazFx5rkII9IeacrolY8xaFHkqgzDMtug&extInfo=P3RpY2tldD1TVC0xNDAzNTItY2IxZDk2OTA1YWIxNDE1ZmE3ZjliNmRiZGQ4MTNlNmIjLw==
+```
+___4. 获取cookie___
+**URL**
+```
+http://zwyd.hbpu.edu.cn/ic-web//auth/token
+```
+```
+{
+            "uuid": uuid,
+            "uniToken": uniToken,
+            "extInfo": extInfo,
+}
+```
+
+___5. cookie获取个人信息___
+```
+http://zwyd.hbpu.edu.cn/ic-web/auth/userInfo
+```
+
+___6. cookie进行预约___
+```
+http://zwyd.hbpu.edu.cn/ic-web/reserve
+```
