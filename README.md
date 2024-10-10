@@ -3,11 +3,22 @@
 
 登录页面：http://zwyd.hbpu.edu.cn
 
+配置文件
+```
+config = {
+    "user": 20224000001,#你的账号
+    "pw": "192947401ba2cd9c04331e056d00ee856895f441d5e07fdfac400711cd04c9c3d953f52",#加密的密码
+    "seat": "T1-1-005",#座位号
+    "StartTime": "07:00:00",#座位开始时间
+    "EndTime": "22:00:00",#座位结束始时间
+}
+```
 由于系统22:30开放预约第二天，建议定时22：30运行，默认预约第二天
 
 首次使用需浏览器F12开发者选项，输入账号密码登录，抓取加密密码，验证码输入任意值都可登录
 ![1728541289515](https://github.com/user-attachments/assets/6123b992-8a0b-416b-bd0b-d8ff2bdf500f)
 
+![1728542073915](https://github.com/user-attachments/assets/236240b2-6d29-4594-86fe-3d43819e3d34)
 
 
 
